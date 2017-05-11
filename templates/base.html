@@ -19,6 +19,9 @@
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/pygments/{{ PYGMENTS_STYLE|default('github') }}.min.css">
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/css/font-awesome.min.css">
 
+  <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/processing/processing.min.js"></script>
+  <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/processing/autoresize.js"></script>
+
   {% if CUSTOM_CSS %}
     <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
   {% endif %}
@@ -126,7 +129,8 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     {% endif %}
-
+    
+    <canvas id="thecanvas" style="position: absolute; left: 0; top: 0; z-index: -1; width: 1; height: 1; overflow: hidden;"></canvas>
   </aside>
   <main>
     {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.main_menu %}
