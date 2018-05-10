@@ -78,6 +78,25 @@
     });
   </script>
   {% endif %}
+
+  <!-- Using MathJax, with the delimiters $ -->
+  <!-- Conflict with pygments for the .mo and .mi -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    styles: {
+    ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+    }
+    });
+  </script>
+
+  <style>
+  .align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  </style>
 </head>
 <body>
   {% if GOOGLE_TAG_MANAGER %}
